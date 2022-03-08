@@ -12,5 +12,8 @@ public class Restcontrollerex {
 	public String helloFromView() {
 		return "hello world from view endpoint";
 	}
-
+	@GetMapping("/er")
+	public String customerrFunction() {
+		throw new RouteNotFoundException();
+	}
 }
