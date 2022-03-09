@@ -32,7 +32,7 @@ public class Restcontrollerex {
 		try {
 			String from = payload.get("from").toString();
 			String to = payload.get("to").toString();
-			double val = (Double)payload.get("value");
+			double val = Double.parseDouble((payload.get("value").toString()));
 			String url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/" + from+"/"+ to + ".json";
 			
 			//validation
