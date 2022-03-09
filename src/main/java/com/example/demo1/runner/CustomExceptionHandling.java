@@ -12,7 +12,7 @@ public class CustomExceptionHandling extends ResponseEntityExceptionHandler{
     public ResponseEntity<RouteNotFound> handleExceptions( RouteNotFoundException exception) {
     	RouteNotFound error = new RouteNotFound();
     	error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setMessage("invalid id");
+        error.setMessage(exception.getMessage());
         return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);
     }
 }
