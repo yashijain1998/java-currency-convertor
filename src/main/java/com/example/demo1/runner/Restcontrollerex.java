@@ -19,7 +19,7 @@ public class Restcontrollerex {
 	@GetMapping("/")
 	public ResponseEntity<Object> Hello() {
 		try {
-			return ResponseHandler.generateResponse("hello from home page",HttpStatus.OK,null);
+			return ResponseHandler.generateResponse("success",HttpStatus.OK,"hello from home page");
 		} catch (Exception e) {
 			return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.MULTI_STATUS,null);
 		}
