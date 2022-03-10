@@ -9,8 +9,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class CustomExceptionHandling extends ResponseEntityExceptionHandler{
     @ExceptionHandler
-    public ResponseEntity<RouteNotFound> handleExceptions( RouteNotFoundException exception) {
-    	RouteNotFound error = new RouteNotFound();
+    public ResponseEntity<NotFound> handleExceptions( NotFoundException exception) {
+    	NotFound error = new NotFound();
     	error.setStatus(HttpStatus.NOT_FOUND.value());
         error.setMessage(exception.getMessage());
         return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);

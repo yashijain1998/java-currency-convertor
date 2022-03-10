@@ -1,6 +1,6 @@
 package com.example.demo1.runner;
 
-public class RouteNotFound {
+public class NotFound {
     private int status;
     private String message;
 	public int getStatus() {

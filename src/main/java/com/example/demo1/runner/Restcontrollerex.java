@@ -52,12 +52,7 @@ public class Restcontrollerex {
 			return ResponseHandler.generateResponse("conversion is successfull",HttpStatus.OK,df.format(amount));
 			
 		} catch(Exception e) {
-			throw new RouteNotFoundException(e.getMessage());
+			throw new NotFoundException(e.getMessage());
 		}
-	}
-	
-	@GetMapping("/er")
-	public String customerrFunction() {
-		throw new RouteNotFoundException("route not found");
 	}
 }
